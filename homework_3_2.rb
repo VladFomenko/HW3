@@ -40,7 +40,14 @@ class Brackets
      end
 
      @result = @res_three.map{|i| @arr_brackets_open[i]}
-     p @str == @result.join('')
+     @str == @result.join('')
   end
 
+end
+
+# Wooooow, I did it! It works! I'm surprised this solution got out of my head.
+class String
+  def valid?
+    Brackets.new(self).valid?
+  end
 end
